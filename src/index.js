@@ -82,7 +82,7 @@ function createToyElement(newName, newImage, likes, toyId) {
 
   toyCollection.appendChild(newElms);
 
-  // Attach the like button click event to the new element
+  // Attaching the like button click event to the new element
   const likeButton = newElms.querySelector(".like-btn");
   likeButton.addEventListener("click", () => {
     updateLikes(newElms, toyId);
