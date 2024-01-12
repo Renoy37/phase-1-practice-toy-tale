@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    //grabbing the input vaues from the forms
     const nameInput = document.querySelector(".input-text[name='name']");
     const imageInput = document.querySelector(".input-text[name='image']");
 
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//function to create new toy element
 function createToyElement(newName, newImage, likes, toyId) {
   const toyCollection = document.querySelector("#toy-collection");
 
@@ -95,7 +97,7 @@ function updateLikes(element, toyId) {
   const currentLikes = parseInt(likesElement.textContent);
   likesElement.textContent = currentLikes + 1;
 
-  // Send a PATCH request to update the likes count on the local db server
+  // Sending a PATCH request to update the likes count on the local db server
   fetch(`http://localhost:3000/toys/${toyId}`, {
     method: "PATCH",
     headers: {
