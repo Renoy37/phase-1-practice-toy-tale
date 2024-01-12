@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nameInput.value = "";
     imageInput.value = "";
 
-    // Call the function to create a new toy element
+    // Calling the function to create a new toy element
     createToyElement(newName, newImage, 0);
 
     // Sending a POST request to the local db server
